@@ -16,3 +16,71 @@
 body{
     background-color: var(--background);
 }
+
+#addBar{
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: var(--containers);
+
+    display: flex;
+    
+    padding: 5px 5px 5px 20px;
+
+    border-radius: 40px;
+
+    
+}
+
+#todoName{
+    background-color: transparent;
+
+    width: 20vw;
+
+    border: none;
+
+    font-size: 1.2em;
+
+    color: var(--active);
+
+    transition: .6s;
+}
+
+#todoName:focus{
+    width: 40vw;
+}
+
+#todoName::placeholder{
+    color: var(--disable);
+}
+
+#todoName:focus{
+    border: none;
+    outline: none;
+}
+
+#btnAdd{
+    background-color: transparent;
+
+    font-size: 2.5em;
+    color: var(--disable);
+
+    border: none;
+
+    margin-left: 5px;
+
+    cursor: pointer;
+
+    transition: .1s;
+}
+
+#btnAdd:hover, #btnAdd:active{
+    color: var(--active);
+}
+
+#todoName:focus + #btnAdd{
+    color: var(--active);
+}
+
