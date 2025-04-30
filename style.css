@@ -18,7 +18,7 @@
         width: 30vw;
     }
 
-    #newToDo:focus{
+    #newToDo:valid, #newToDo:focus{
         width: 40vw;
     }
 
@@ -30,15 +30,13 @@
 
 @media screen and (max-width: 1063px) {
     #newToDo{
-        width: 20vw;
+        width: 30vw;
         min-width: 210px;
     }
 
-    #newToDo:focus{
+    #newToDo:valid, #newToDo:focus{
         width: 40vw;
     }
-
-    
 }
 
 @media screen and (max-width: 767px) {
@@ -93,6 +91,10 @@ h1{
     font-size: 1.5em;
 
     margin-left: 3px;
+}
+
+.ri-checkbox-fill ~ p{
+    text-decoration: line-through;
 }
 
 .toDoContainer i{
