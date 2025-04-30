@@ -13,8 +13,106 @@
     --disable: rgba(255, 255, 255, 0.3);
 }
 
+@media screen and (min-width: 1064px) {
+    #newToDo{
+        width: 30vw;
+    }
+
+    #newToDo:focus{
+        width: 40vw;
+    }
+
+    main{
+        width: 40vw;
+        min-width: 210px;
+    }
+}
+
+@media screen and (max-width: 1063px) {
+    #newToDo{
+        width: 20vw;
+        min-width: 210px;
+    }
+
+    #newToDo:focus{
+        width: 40vw;
+    }
+
+    
+}
+
+@media screen and (max-width: 767px) {
+    #newToDo{
+        width: 40vw;
+        max-width: 250px;
+    }
+}
+
 body{
     background-color: var(--background);
+}
+
+main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    background-color: var(--containers);
+
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--disable);
+}
+
+.toDoContainer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    
+    width: 100%;
+    min-width: 300px;
+}
+
+.toDo{
+    display: flex;
+}
+
+.toDoName{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+
+    margin-left: 3px;
+}
+
+.toDoContainer i{
+    color: var(--active);
+    font-size: 1.5em;
+}
+
+.btnCheck{
+    cursor: pointer;
+}
+
+.btnTrash{
+    margin-left: 15px;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btnTrash:hover, .btnTrash:active{
+    color: rgb(255, 40, 40);
 }
 
 #addBar{
@@ -34,10 +132,8 @@ body{
     
 }
 
-#todoName{
+#newToDo{
     background-color: transparent;
-
-    width: 20vw;
 
     border: none;
 
@@ -48,15 +144,11 @@ body{
     transition: .6s;
 }
 
-#todoName:focus{
-    width: 40vw;
-}
-
-#todoName::placeholder{
+#newToDo::placeholder{
     color: var(--disable);
 }
 
-#todoName:focus{
+#newToDo:focus{
     border: none;
     outline: none;
 }
@@ -80,7 +172,7 @@ body{
     color: var(--active);
 }
 
-#todoName:focus + #btnAdd{
+#newToDo:focus + #btnAdd{
     color: var(--active);
 }
 
