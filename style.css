@@ -93,6 +93,8 @@ h1{
     font-size: 1.5em;
 
     margin-left: 3px;
+
+    text-decoration: none;
 }
 
 .ri-checkbox-fill ~ p{

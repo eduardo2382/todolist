@@ -30,6 +30,10 @@ function updateLocalStorage(){
 function renderToDoList(){
     document.querySelector('main').innerHTML = ''
 
+    if(toDoList.length == 0){
+        document.querySelector('main').innerHTML = '<h1>Sem tarefas</h1>'
+    }
+
     toDoList.forEach((toDo)=>{
         renderToDo(toDo.name, toDo.selected)
     })
@@ -54,8 +58,6 @@ function addToDoList(toDoName){
 
 function renderToDo(toDoName, state=false){
     //Renderiza a tarefa na tela
-
-    console.log(state)
 
     if(toDoList.length == 1){
         document.querySelector('main').innerHTML = ''
@@ -112,7 +114,8 @@ function createTrash(){
     //Cria e retorna o icone de lixeira
 
     let trash = document.createElement('i')
-    trash.className = 'ri-delete-bin-fill btnTash'
+    trash.className = 'ri-delete-bin-fill btnTrash'
+    addClickToTrash(trash)
 
     return trash
 }
@@ -147,3 +150,22 @@ function toggleStateToDo(checkbox){
     updateLocalStorage()
 }
 
+function addClickToTrash(trash){
+    trash.addEventListener('click',()=>{
+        deleteToDo(trash)
+    })
+}
+
+function deleteToDo(trash){
+    let trashList = document.querySelectorAll('.btnTrash')
+
+    trashList.forEach((element, index)=>{
+        if(element == trash){
+            toDoList.splice(index, 1)
+            console.log(toDoList)
+        }
+    })
+
+    updateLocalStorage()
+    renderToDoList()
+}
