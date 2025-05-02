@@ -172,6 +172,8 @@ h1{
     cursor: pointer;
 
     transition: .1s;
+
+    -webkit-tap-highlight-color: transparent;
 }
 
 #btnAdd:active{
