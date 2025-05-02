@@ -10,10 +10,9 @@ btnAdd.addEventListener('click', ()=>{
 
     if(toDoName.length > 0){
         addNewToDo(toDoName)
-    }
-
-    newToDo.value = ''
-    newToDo.focus()
+        newToDo.value = ''
+        newToDo.focus()
+    } 
 })
 
 checkLocalStorage()
