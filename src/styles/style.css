@@ -92,6 +92,10 @@ h2{
     color: var(--text-input);
 }
 
+#inptNewTodo:focus{
+    outline: solid 2px var(--btn-add-todo);
+}
+
 #btnAddTodo{
     background-color: var(--btn-add-todo);
 
