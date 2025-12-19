@@ -28,3 +28,15 @@ body{
     flex-direction: column;
 }
 
+header{
+    color: var(--text);
+
+    width: 100%;
+    max-width: 60vw;
+
+    text-align: left;
+
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
