@@ -1,5 +1,39 @@
 @charset "UTF-8";
 
+@media screen and (max-width: 768px) {
+    header{
+        max-width: 70vw;
+    }
+
+    section{
+        max-width: 70vw;
+    }
+
+    #inputsTodo{
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header{
+        max-width: 50vw;
+    }
+
+    section{
+        max-width: 50vw;
+    }
+
+    #inputsTodo{
+        display: flex;
+        flex-direction: row;
+
+        gap: 12px;
+    }
+}
+
 :root{
     --background: #111827;
     --background-container: #1F2937;
@@ -36,7 +70,6 @@ header{
     color: var(--text);
 
     width: 100%;
-    max-width: 50vw;
 
     text-align: left;
 
@@ -46,8 +79,6 @@ header{
 
 section{
     background-color: var(--background-container);
-
-    width: 50vw;
 
     border-radius: 8px;
 
@@ -69,12 +100,7 @@ h2{
     margin-bottom: 18px;
 }
 
-#inputsTodo{
-    display: flex;
-    flex-direction: row;
 
-    gap: 12px;
-}
 
 #inptNewTodo{
     width: 100%;
