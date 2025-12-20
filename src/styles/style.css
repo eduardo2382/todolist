@@ -172,8 +172,6 @@ h2{
 
     background-color: var(--background-itens-container);
 
-    color: var(--text);
-
     border-radius: 6px;
 
     padding: 12px;
@@ -183,6 +181,11 @@ h2{
     display: flex;
     flex-direction: row;
     gap: 12px;
+}
+
+.todo p{
+    color: var(--text);
+    font-size: 1em;
 }
 
 .todoChecked{
@@ -197,7 +200,7 @@ h2{
 .todoChecked .todo i{
     color: var(--input-radius-selected);
 
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     cursor: pointer;
 
@@ -207,7 +210,7 @@ h2{
 .btnCheckTodo{
     color: var(--input-radius);
 
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     cursor: pointer;
 
@@ -221,7 +224,7 @@ h2{
 .btnDeleteTodo{
     color: var(--btn-delete);
 
-    font-size: 1.1em;
+    font-size: 1.2em;
 
     cursor: pointer;
     transition: .2s;
