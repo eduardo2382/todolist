@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
     <header>
@@ -21,7 +22,25 @@
                 <input type="button" value="Adicionar" id="btnAddTodo">
             </span>
         </section>
-        <section class="listTodoContainer"></section>
+        <section class="listTodoContainer">
+            <h2>Minhas Tarefas</h2>
+            <div id="listTodo">
+                <div class="todoContainer">
+                    <span class="todo">
+                        <i class="ri-checkbox-blank-circle-line btnCheckTodo"></i>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi reiciendis quo aliquid doloribus commodi veniam iure iusto consequatur at! Fuga veritatis consequuntur quam aliquid repellat pariatur debitis, facere incidunt quae.</p>
+                    </span>
+                    <i class="ri-delete-bin-7-line btnDeleteTodo"></i>
+                </div>
+                <div class="todoContainer todoChecked">
+                    <span class="todo">
+                        <i class="ri-checkbox-circle-fill "></i>
+                        <p>Nome da Tarefa</p>
+                    </span>
+                    <i class="ri-delete-bin-7-line btnDeleteTodo"></i>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="src/scripts/script.js"></script>

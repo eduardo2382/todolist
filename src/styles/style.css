@@ -4,11 +4,14 @@
     --background: #111827;
     --background-container: #1F2937;
     --background-itens-container: #374151;
+    --background-todo-checked: rgba(55, 65, 81, 0.5); 
     --text: #FFFFFF;
     --text-input: #CCCCCC;
+    --text-todo-checked: #9CA3AF;
     --input-radius: #6B7280;
     --input-radius-selected: #22C55E;
     --btn-delete: #9CA3AF;
+    --btn-delete-hover: rgb(239 68 68); 
     --btn-add-todo: #9333EA;
     --btn-add-todo-hover: rgb(126 34 206);
 }
@@ -86,6 +89,8 @@ h2{
     border: none;
     border-radius: 8px;
     outline: none;
+
+    transition: .2s;
 }
 
 #inputNewTodo::placeholder{
@@ -114,4 +119,78 @@ h2{
 
 #btnAddTodo:hover{
     background-color: var(--btn-add-todo-hover);
+}
+
+#listTodo{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.todoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--background-itens-container);
+
+    color: var(--text);
+
+    border-radius: 6px;
+
+    padding: 12px;
+}
+
+.todo{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.todoChecked{
+    background-color: var(--background-todo-checked);
+}
+
+.todoChecked p{
+    text-decoration: line-through;
+    color: var(--text-todo-checked);
+}
+
+.todoChecked .todo i{
+    color: var(--input-radius-selected);
+
+    font-size: 1.2em;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btnCheckTodo{
+    color: var(--input-radius);
+
+    font-size: 1.2em;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btnCheckTodo:hover{
+    color: var(--btn-add-todo);
+}
+
+.btnDeleteTodo{
+    color: var(--btn-delete);
+
+    font-size: 1.1em;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btnDeleteTodo:hover{
+    color: var(--btn-delete-hover);
 }
