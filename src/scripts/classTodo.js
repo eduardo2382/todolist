@@ -1,34 +1,36 @@
-import { createElement } from "react";
-
 export class Todo{
-    #elementTodo;
 
-    constructor(name){
+    constructor(id, name, checked){
+        this.id = id
         this.name = name
+        this.checked = checked
     }
 
-    #createElementTodo(){
-        this.#elementTodo = createElement('div')
+    createElementTodo(){
+        let elementTodo = document.createElement('div')
+        elementTodo.classList.add('todoContainer')
 
-        let todoSpan = createElement('span')
+        let todoSpan = document.createElement('span')
         todoSpan.setAttribute('class', 'todo')
 
-        let inputRadius = createElement('i')
+        let inputRadius = document.createElement('i')
         inputRadius.classList.add('ri-checkbox-blank-circle-line') 
-        inputRadius.classLisit.add('btnCheckTodo')
+        inputRadius.classList.add('btnCheckTodo')
         todoSpan.appendChild(inputRadius)
 
-        let nameTodo = createElement('p')
+        let nameTodo = document.createElement('p')
         nameTodo.innerText = this.name
         todoSpan.appendChild(nameTodo)
 
-        this.#elementTodo.appendChild(todoSpan)
+        elementTodo.appendChild(todoSpan)
 
-        let btnDelete = createElement('i')
+        let btnDelete = document.createElement('i')
         btnDelete.classList.add('ri-delete-bin-7-line')
         btnDelete.classList.add('btnDeleteTodo')
 
-        this.#elementTodo.appendChild(btnDelete)
+        elementTodo.appendChild(btnDelete)
+
+        return elementTodo
     }
 
 }

@@ -15,6 +15,7 @@ export class Storage{
 
     #updateLocalStorage(){
         localStorage.setItem(this.#nameStorage, JSON.stringify(this.#storage))
+        this.#storage = JSON.parse(localStorage.getItem(this.#nameStorage))
     }
 
     addStorage(item){
@@ -23,11 +24,24 @@ export class Storage{
         this.#updateLocalStorage()
     }
 
+    //!!
     removeStorage(item){
         this.#storage = this.#storage.filter((todo)=>{
             return todo!= item
         })
 
         this.#updateLocalStorage()
+    }
+
+    mapStorage(func){
+        for (let i = 0; i < this.#storage.length; i++) {
+            let element = this.#storage[i];
+            
+            func(element)
+        }
+    }
+
+    numberOfItems(){
+        return this.#storage.length
     }
 }
