@@ -110,7 +110,7 @@ h2{
 
 
 
-#inptNewTodo{
+#inputNewTodo{
     width: 100%;
     
     background-color: var(--background-itens-container);
@@ -131,7 +131,7 @@ h2{
     color: var(--text-input);
 }
 
-#inptNewTodo:focus{
+#inputNewTodo:focus{
     outline: solid 2px var(--btn-add-todo);
 }
 
