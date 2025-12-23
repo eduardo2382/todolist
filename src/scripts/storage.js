@@ -33,6 +33,16 @@ export class Storage{
         this.#updateLocalStorage()
     }
 
+    updateStorage(item){
+        for(let i = 0; i < this.#storage.length; i++){
+            if(this.#storage[i].id == item.id){
+                this.#storage[i] = item
+            }
+        }
+
+        this.#updateLocalStorage()
+    }
+
     mapStorage(func){
         for (let i = 0; i < this.#storage.length; i++) {
             let element = this.#storage[i];
