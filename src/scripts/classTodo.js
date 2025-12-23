@@ -50,6 +50,11 @@ export class Todo{
         let btnDelete = document.createElement('i')
         btnDelete.classList.add('ri-delete-bin-7-line')
         btnDelete.classList.add('btnDeleteTodo')
+        btnDelete.addEventListener('click', ()=>{
+            let eventDeleteTodo = new Event('deleteTodo')
+
+            this.elementTodo.dispatchEvent(eventDeleteTodo)
+        })
 
         this.elementTodo.appendChild(btnDelete)
     }

@@ -49,6 +49,12 @@ function updateTodosElements(){
                     checked: todo.checked
                 })
             })
+
+            todo.elementTodo.addEventListener('deleteTodo', ()=>{
+                storage.removeStorage(todoData.id)
+
+                updateTodosElements()
+            })
             
             //adiciona o elemento do todo na tela
             listTodo.appendChild(todo.elementTodo)

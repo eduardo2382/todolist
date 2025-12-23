@@ -25,9 +25,9 @@ export class Storage{
     }
 
     //!!
-    removeStorage(item){
-        this.#storage = this.#storage.filter((todo)=>{
-            return todo!= item
+    removeStorage(id){
+        this.#storage = this.#storage.filter((todoData)=>{
+            return todoData.id != id
         })
 
         this.#updateLocalStorage()
