@@ -17,6 +17,11 @@ export class Todo{
         inputRadius.classList.add('ri-checkbox-blank-circle-line') 
         inputRadius.classList.add('btnCheckTodo')
         todoSpan.appendChild(inputRadius)
+        inputRadius.addEventListener('click', ()=>{
+            inputRadius.classList.toggle('ri-checkbox-blank-circle-line')
+            inputRadius.classList.toggle('ri-checkbox-circle-fill')
+            elementTodo.classList.toggle('todoChecked')
+        })
 
         let nameTodo = document.createElement('p')
         nameTodo.innerText = this.name
